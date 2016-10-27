@@ -58,4 +58,15 @@ E=A | B
 print E
 print '\n'
 
+print "A: ", A
+print "B: ", B
+
+#czesc wspolna dwoch zbiorow
+F=A&B
+print F
+print '\n'
+
+#roznica symetryczna
+G=A^B
+print G
 
