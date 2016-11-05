@@ -1,17 +1,18 @@
 '''
-SITO ERASTOTENESA
+SITO ERATOSTENESA
 '''
 
-class SitoErastotenesa:
+
+class SitoEratostenesa:
     '''
-    Sito Erastotenesa
+    Sito Eratostenesa
     sluzy do wyszukiwania wszystkich liczb
     pierwszych z zakresu [2 ... n]
     '''
 
     def __init__(self, n):
-        self.n = n                                      #zakres wyszukiwania liczb pierwszych
-        self.tablica = [0 for i in range(0, n + 1)]     #lista wypelniona zerami
+        self.n = n  # zakres wyszukiwania liczb pierwszych
+        self.tablica = [0 for i in range(0, n + 1)]  # lista wypelniona zerami
         self.przesiej()
 
     def przesiej(self):
@@ -32,5 +33,6 @@ class SitoErastotenesa:
             if self.tablica[i] is 0:
                 print i,
 
-sito = SitoErastotenesa(50)
+
+sito = SitoEratostenesa(50)
 sito.wyswietl()
