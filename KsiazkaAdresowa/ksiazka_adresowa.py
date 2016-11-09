@@ -64,7 +64,7 @@ class KsiazkaAdresowa(object):
 
 
     def wyswietl(self):
-        print '-'*138
+        print '-'*123
         print "|%s|%s|%s|%s|%s|%s|%s|" %("Id".ljust(5),
                                          "Imie".ljust(20),
                                          "Nazwisko".ljust(20),
@@ -72,14 +72,14 @@ class KsiazkaAdresowa(object):
                                          "Adres e-mail".ljust(30),
                                          "Wiek".ljust(5),
                                          "Plec".ljust(15))
-        print '-'*138
+        print '-'*123
         if len(self.kontakty) == 0:
             print "%s" % "AKTUALNIE BRAK KONTAKTOW NA LISCIE, DODAJ NOWY KONTAKT ABY WYPELNIC TA TABELE".center(130)
-            print '-'*138
+            print '-'*123
         else:
             for i in self.kontakty:
                 i.wyswietl_kontakt()
-                print '-'*138
+                print '-'*123
 
 
 class KsiazkaAdresowaUI(KsiazkaAdresowa):
