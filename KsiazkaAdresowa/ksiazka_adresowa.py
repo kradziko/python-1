@@ -1,10 +1,5 @@
 '''
-ksiazka adresowa
-mozna dane wprawadzic usunac i zmodyfikowac
-dane powinny byc wyswietlane w postaci tabeli
-menu z opcjami
-wyswietla sie jako tabelka
-usun wg indentyfikatora np. (nr pesel)
+Ksiazka Adresowa
 '''
 
 class Kontakt(object):
