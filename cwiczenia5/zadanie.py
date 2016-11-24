@@ -33,21 +33,35 @@ class Wytworniki:
         return [[y for y in list_obj if not (y % x)] for x in numbers]
 
     def find_duplicate(self, list_obj):
-        return [y for x in list_obj for y in list_obj if y in list_obj[list_obj.index(y) + 1:]]
+        return [y for x in list_obj for y in x if y in x[x.index(y) + 1:]]
 
     def X_letter_duplicates(self, list_obj):
         duplicates = self.find_duplicate(list_obj)
-        print duplicates
-#        list_obj = ['X' for x in list_obj if x in duplicates]
         for x in list_obj:
-            if x in duplicates:
-                list_obj[list_obj.index(x)] = 'X'
+            for y in x:
+                if y in duplicates:
+                    list_obj[list_obj.index(x)][x.index(y)] = 'X'
         return list_obj
+
+    def remove_duplicates(self, list_obj):
+        duplicates = self.find_duplicate(list_obj)
+        for x in list_obj:
+            for y in x:
+                if y in duplicates:
+                    list_obj[list_obj.index(x)].remove(y)
+        return list_obj
+
+    def average(self):
+        pass
 
 
 w = Wytworniki()
 lista = w.make_list(1, 50)
 w.random_list(1, 99, lista)
 multiple = w.find_multiple(lista)
+print multiple
 duplikaty = w.find_duplicate(multiple)
-print w.X_letter_duplicates([10, 20, 20, 30, 312])
+print duplikaty
+print w.X_letter_duplicates(multiple)
+print w.remove_duplicates(multiple)
+
